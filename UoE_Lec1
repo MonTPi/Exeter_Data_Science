@@ -1,4 +1,11 @@
 print('hello')
-import '/Users/jdlilley/Desktop/Data Science and Modelling/Python +/VisualStudio/DSM-repo/gitGo.py'
-from gitGo import git_go
 
+
+ryme = ('one fish, two fish, red fish, blue fish')
+
+
+ryme.split 
+
+print(ryme[0],ryme[1],ryme[2])
+
+from gitGo import git_go()
