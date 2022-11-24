@@ -1,3 +1,4 @@
 print('hello')
+import '/Users/jdlilley/Desktop/Data Science and Modelling/Python +/VisualStudio/DSM-repo/gitGo.py'
 from gitGo import git_go
 
