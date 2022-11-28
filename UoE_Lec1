@@ -8,4 +8,6 @@ ryme.split
 
 print(ryme[0],ryme[1],ryme[2])
 
-from gitGo import git_go()
+import gitGo
+
+from gitGo import git_go
