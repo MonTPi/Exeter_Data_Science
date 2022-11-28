@@ -11,3 +11,5 @@ print(ryme[0],ryme[1],ryme[2])
 import gitGo
 
 from gitGo import git_go
+
+git_go()
