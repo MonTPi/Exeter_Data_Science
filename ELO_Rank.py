@@ -1,7 +1,7 @@
 def rank(eloA, S_A, eloB, S_B):
     #transform rating
-    R_a = 10^(eloA/400)
-    R_b = 10^(eloB/400)
+    R_a = 10**(eloA/400)
+    R_b = 10**(eloB/400)
     #expected score
     E_a = R_a / (R_a + R_b)
     E_b = R_b / (R_a + R_b)
@@ -19,10 +19,12 @@ def rank(eloA, S_A, eloB, S_B):
     eloA = eloA + (K * (E_a - s_a))
     eloB = eloB + (K * (E_b - s_b))
 
-    return (eloA,eloB)
+    x = [eloA,eloB]
+
+    return x
 
 
-K = 15
+K = 20
 
 
 if __name__ == '__main__':
