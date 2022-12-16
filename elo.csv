@@ -1,0 +1,46 @@
+﻿teamA,S_A,S_B,teamB
+EU,3,0,C9
+Flight,1,3,C9
+G2,3,1,C9
+Ghosts,0,3,C9
+NRG,0,3,C9
+P Knights,0,3,C9
+Rogue,3,2,C9
+space station,3,1,C9
+soniqs,2,3,C9
+Flight,3,1,EU
+G2,3,1,EU
+Ghosts,3,0,EU
+NRG,3,1,EU
+P Knights,3,2,EU
+Rogue,0,3,EU
+space station,3,0,EU
+soniqs,3,0,EU
+G2,3,1,Flight
+Ghosts,3,1,Flight
+NRG,3,0,Flight
+P Knights,3,2,Flight
+Rogue,3,0,Flight
+space station,3,0,Flight
+soniqs,3,1,Flight
+Ghosts,3,1,G2
+NRG,3,2,G2
+P Knights,1,3,G2
+Rogue,0,3,G2
+space station,3,1,G2
+soniqs,0,3,G2
+NRG,2,3,Ghosts
+P Knights,3,1,Ghosts
+Rogue,2,3,Ghosts
+space station,3,1,Ghosts
+soniqs,3,2,Ghosts
+P Knights,2,3,NRG
+Rogue,1,3,NRG
+space station,3,2,NRG
+soniqs,2,3,NRG
+Rogue,3,2,P Knights
+space station,3,1,P Knights
+soniqs,3,2,P Knights
+space station,3,0,Rogue
+soniqs,3,1,Rogue
+space station,3,1,soniqs

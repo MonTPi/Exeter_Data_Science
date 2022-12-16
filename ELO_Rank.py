@@ -11,17 +11,18 @@ def rank(eloA, S_A, eloB, S_B):
         s_b = 0
     elif (S_A < S_B):
         s_a = 0
-        s_b = 0
+        s_b = 1
     else :
         s_a = 0.5
         s_b = 0.5
 
-    eloA = eloA + (K * (E_a - s_a))
-    eloB = eloB + (K * (E_b - s_b))
+    eloA = eloA + (K * (s_a - E_a))
+    eloB = eloB + (K * (s_b - E_b))
 
     x = [eloA,eloB]
 
     return x
+    
 
 
 K = 20
