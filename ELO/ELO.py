@@ -1,4 +1,4 @@
-from ELO_Rank import rank
+from ELO.ELO_Rank import rank
 import pandas as pd
 import numpy as np
 

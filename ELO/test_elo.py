@@ -1,5 +1,5 @@
 
-from ELO_Rank import rank
+from ELO.ELO_Rank import rank
 import pandas as pd
 df = pd.read_csv("elo.csv")
 df = df.replace(u'\xa0', u'', regex=True)
@@ -9,7 +9,7 @@ r = rank(1000,4,1000,df.S_A[0])
 
 print(r)
 
-from ELO_Rank import rank
+from ELO.ELO_Rank import rank
 import pandas as pd
 import numpy as np
 
