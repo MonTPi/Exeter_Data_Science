@@ -14,7 +14,7 @@ from torch import optim
 import torch.nn.functional as F
 from torchvision import datasets, transforms, models
 
-dataset_dir = 'kaggle/input/multi-cancer/Multi Cancer'
+dataset_dir = '/Volumes/UoE_EnMa011/Multi Cancer'
 
 if not os.path.exists('dataset'):
     os.mkdir('dataset')
