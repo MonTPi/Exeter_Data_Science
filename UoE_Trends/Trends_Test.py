@@ -19,25 +19,28 @@ dataset_dir = '/Users/jdlilley/Desktop/Data Science and Modelling/Python +/Visua
 
 if not os.path.exists('dataset'):
     os.mkdir('dataset')
-for data_type in os.listdir(dataset_dir):
+cancer_type = os.listdir(dataset_dir)
+cancer_type = cancer_type[1:3]
+for data_type in cancer_type:
     os.mkdir(os.path.join('dataset', data_type))
     os.mkdir(os.path.join('dataset', data_type, 'train'))
     os.mkdir(os.path.join('dataset', data_type, 'val'))
     os.mkdir(os.path.join('dataset', data_type, 'test'))
-    
-    for cls in os.listdir(os.path.join(dataset_dir, data_type)):
-    os.mkdir(os.path.join('dataset', data_type, 'train', cls))
-    os.mkdir(os.path.join('dataset', data_type, 'val', cls))
-    os.mkdir(os.path.join('dataset', data_type, 'test', cls))
-    folder_imgs = os.listdir(os.path.join(dataset_dir, data_type, cls))
+    folder_imgs = os.listdir(os.path.join(dataset_dir, data_type,))
     for j in range(len(folder_imgs)):
         rand = np.random.random()
         if rand < 0.1:
-            shutil.copyfile(os.path.join(os.path.join(dataset_dir, data_type, cls, folder_imgs[j])), 
-                                            os.path.join('dataset', data_type, 'val', cls, folder_imgs[j]))
+            shutil.copyfile(os.path.join(os.path.join(dataset_dir, data_type, folder_imgs[j])), 
+                                            os.path.join('dataset', data_type, 'val', folder_imgs[j]))
         elif rand < 0.2:
-            shutil.copyfile(os.path.join(os.path.join(dataset_dir, data_type, cls, folder_imgs[j])), 
-                                            os.path.join('dataset', data_type, 'test', cls, folder_imgs[j]))
+            shutil.copyfile(os.path.join(os.path.join(dataset_dir, data_type, folder_imgs[j])), 
+                                            os.path.join('dataset', data_type, 'test', folder_imgs[j]))
         else:
-            shutil.copyfile(os.path.join(os.path.join(dataset_dir, data_type, cls, folder_imgs[j])), 
-                                            os.path.join('dataset', data_type, 'train', cls, folder_imgs[j]))
+            shutil.copyfile(os.path.join(os.path.join(dataset_dir, data_type, folder_imgs[j])), 
+                                            os.path.join('dataset', data_type, 'train', folder_imgs[j]))
+
+
+data_dir = 'dataset'
+
+datasets_dirs = os.listdir(data_dir)
+print(datasets_dirs)
