@@ -49,7 +49,7 @@ model.compile(loss='binary_crossentropy',
 
 # Train the model
 history = model.fit(train_generator,
-                    epochs=30,
+                    epochs=10,
                     batch_size=batch_size,
                     validation_data=test_generator)
 
@@ -59,7 +59,7 @@ print(f"Test accuracy: {test_acc*100:.2f}%")
 
 # Predict the classes of the test set
 predictions = model.predict(test_generator)
-predicted_classes = (predictions > 0.5).astype(int)
+predicted_classes = (predictions > 0.2).astype(int)
 
 # Plot the confusion matrix
 from sklearn.metrics import confusion_matrix
@@ -80,3 +80,11 @@ ax.set_xlabel('Predicted')
 ax.set_ylabel('True')
 ax.set_title('Confusion matrix')
 plt.show()
+
+import pandas as pd
+
+# Create a DataFrame from the true and predicted classes
+results_df = pd.DataFrame({'true_classes': true_classes, 'predicted_classes': predicted_classes.reshape(-1)})
+
+# Save the DataFrame to a CSV file
+results_df.to_csv('results_OG.csv', index=False)
